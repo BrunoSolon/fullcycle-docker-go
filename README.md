@@ -10,3 +10,6 @@ Para executá-la, execute o seguinte comando:
 
 docker run brunosolon/codeeducation:latest
  ```
+O comando acima deve exibir o seguinte resultado:
+
+![img.png](img.png)
