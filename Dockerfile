@@ -12,10 +12,10 @@ COPY go.mod hello.go ./
 RUN go mod download && go mod verify
 COPY *.go ./
 
-RUN go build
+RUN go build -o code
 
 FROM hello-world as release
 
-COPY --from=build /usr/src/app/docker-go ./
+COPY --from=build /usr/src/app .
 
-CMD ["./docker-go"]
+CMD ["./code"]
